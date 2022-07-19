@@ -1,25 +1,53 @@
-import {Routes, Route} from 'react-router-dom';
-import Navigation from './routes/navigation/navigation.component';
-import SignIn from './routes/sign-in/sign-in.components';
-import Home from './routes/home/home.component';
+import { Routes, Route } from 'react-router-dom';
+import Authentication from './routes/authentiaction/authentiation.components';
 
+import Home from './routes/home/home.component';
+import Navigation from './routes/navigation/navigation.component';
 
 const Shop = () => {
-  return (
-    <h1>I am The Shop PAGE!</h1>
-  )
-}
+  return <h1>I am the shop page</h1>;
+};
 
 const App = () => {
-  return(
+  return (
     <Routes>
       <Route path='/' element={<Navigation />}>
-        <Route index element={<Home />}/>
-        <Route path='shop' element={<Shop />}/>
-        <Route path='sign-in' element={<SignIn />}/>
+        <Route index element={<Home />} />
+        <Route path='shop' element={<Shop />} />
+        <Route path='auth' element={<Authentication/>} />
       </Route>
     </Routes>
   );
 };
 
 export default App;
+
+
+
+
+
+// import {Routes, Route} from 'react-router-dom';
+// import Navigation from './routes/navigation/navigation.component';
+// import Authentication from './routes/authentiaction/authentiation.components';
+// import Home from './routes/home/home.component';
+
+
+// const Shop = () => {
+//   return (
+//     <h1>I am The Shop PAGE!</h1>
+//   )
+// }
+
+// const App = () => {
+//   return(
+//     <Routes>
+//       <Route path='/' element={<Navigation />}>
+//         <Route index element={<Home />}/>
+//         <Route path='shop' element={<Shop />}/>
+//         <Route path='auth' element={<Authentication />}/>
+//       </Route>
+//     </Routes>
+//   );
+// };
+
+// export default App;
